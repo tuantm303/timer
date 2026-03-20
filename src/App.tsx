@@ -267,15 +267,15 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
               onClick={() => onSelect(sessionId)}
               className="h-40 bg-white/80 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 flex flex-col items-center justify-center gap-4 transition-all group backdrop-blur-xl px-6"
             >
-              <div className="size-16 bg-red-600 rounded-3xl flex items-center justify-center text-yellow-400 shadow-[3px_3px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
-                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuong.svg" className="size-10 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
+              <div className="size-16 bg-[#a20d0d] rounded-3xl flex items-center justify-center text-[#23328c] shadow-[1px_1px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-10 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
               </div>
-              <span className="text-[27px] md:text-[33px] font-bold text-slate-800 tracking-tight text-center line-clamp-2">{sessionNames[sessionId]}</span>
+              <span className="text-[30px] md:text-[36px] font-black text-[#23328c] tracking-tight text-center line-clamp-2 drop-shadow-[1px_1px_0px_rgba(0,0,0,1)]">{sessionNames[sessionId]}</span>
             </motion.button>
           ))}
         </div>
 
-        <footer className="mt-20 text-center">
+        <footer className="absolute bottom-4 left-0 right-0 text-center">
           <p className="text-white/60 text-xs tracking-[0.3em] font-bold uppercase">© Design by TuanTM</p>
         </footer>
       </div>
@@ -503,9 +503,9 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="flex items-center gap-3 text-yellow-400 bg-red-600 px-6 py-3 rounded-full shadow-[3px_3px_0px_rgba(0,0,0,1)]"
+                className="flex items-center gap-3 text-[#23328c] bg-[#a20d0d] px-6 py-3 rounded-full shadow-[1px_1px_0px_rgba(0,0,0,1)]"
               >
-                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuong.svg" className="size-6 animate-pulse drop-shadow-[1px_1px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-6 animate-pulse drop-shadow-[1px_1px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
                 <span className="text-lg md:text-xl font-black uppercase tracking-widest">
                   Next: {nextTimer.time} ({nextTimer.ringtoneName})
                 </span>
@@ -1175,7 +1175,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
               className="mt-8 bg-white/70 border border-slate-200/50 rounded-3xl p-8 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.04)]"
             >
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2 text-slate-900">
-                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuong.svg" className="size-6 text-red-600 drop-shadow-[1px_1px_0px_rgba(0,0,0,0.3)]" referrerPolicy="no-referrer" />
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-6 text-red-600 drop-shadow-[1px_1px_0px_rgba(0,0,0,0.3)]" referrerPolicy="no-referrer" />
                 Active Timers
               </h3>
               
