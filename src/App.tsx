@@ -268,12 +268,12 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
               whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 255, 255, 0.98)' }}
               whileTap={{ scale: 0.98 }}
               onClick={() => onSelect(sessionId)}
-              className="h-40 bg-white/80 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 flex flex-col items-center justify-center gap-4 transition-all group backdrop-blur-xl px-6"
+              className="h-auto min-h-[12rem] py-8 bg-white/80 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 flex flex-col items-center justify-center gap-4 transition-all group backdrop-blur-xl px-6"
             >
               <div className="size-16 bg-[#a20d0d] rounded-3xl flex items-center justify-center text-[#23328c] shadow-[1px_1px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
                 <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-10 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
               </div>
-              <span className="text-[30px] md:text-[36px] font-black text-[#23328c] tracking-tight text-center line-clamp-2 drop-shadow-[1px_1px_0px_rgba(0,0,0,1)]">{sessionNames[sessionId]}</span>
+              <span className="text-[30px] md:text-[36px] font-black text-[#23328c] tracking-tight text-center drop-shadow-[1px_1px_0px_rgba(0,0,0,1)] leading-tight">{sessionNames[sessionId]}</span>
             </motion.button>
           ))}
         </div>
