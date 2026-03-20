@@ -506,7 +506,7 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="flex items-center gap-3 text-[#23328c] bg-[#a20d0d] px-6 py-3 rounded-full shadow-[1px_1px_0px_rgba(0,0,0,1)]"
+                className="flex items-center gap-3 text-white bg-[#a20d0d] px-6 py-3 rounded-full shadow-[1px_1px_0px_rgba(0,0,0,1)]"
               >
                 <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-6 animate-pulse drop-shadow-[1px_1px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
                 <span className="text-lg md:text-xl font-black uppercase tracking-widest">
