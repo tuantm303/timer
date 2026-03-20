@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "Timer": {
+      "title": "Timer",
+      "description": "A scheduled timer with a ringtone.",
+      "type": "object",
+      "properties": {
+        "sessionId": { "type": "string", "description": "The ID of the session this timer belongs to." },
+        "date": { "type": "string", "format": "date", "description": "The scheduled date (YYYY-MM-DD)." },
+        "time": { "type": "string", "description": "The scheduled time (HH:mm)." },
+        "ringtoneName": { "type": "string", "description": "The name of the uploaded ringtone file." },
+        "ringtoneUrl": { "type": "string", "description": "The URL to the ringtone file (placeholder for now)." },
+        "createdBy": { "type": "string", "description": "The UID of the user who created the timer." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "The time the timer was created." }
+      },
+      "required": ["date", "time", "ringtoneName", "createdBy", "createdAt"]
+    },
+    "User": {
+      "title": "User",
+      "description": "User profile information.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string", "enum": ["admin", "user"] }
+      },
+      "required": ["uid", "email", "role"]
+    }
+  },
+  "firestore": {
+    "timers": {
+      "schema": "Timer",
+      "description": "Collection of scheduled timers."
+    },
+    "users": {
+      "schema": "User",
+      "description": "Collection of user profiles."
+    },
+    "sessions": {
+      "schema": {
+        "title": "Session",
+        "description": "An exam session.",
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "description": "The name of the session." }
+        },
+        "required": ["name"]
+      },
+      "description": "Collection of exam sessions."
+    }
+  }
+}
