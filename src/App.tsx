@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useCallback, Component } from 'reac
 import { 
   Clock, 
   Globe, 
-  Bell, 
   History, 
   Settings, 
   HelpCircle, 
@@ -268,10 +267,10 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
               onClick={() => onSelect(sessionId)}
               className="h-40 bg-white/80 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 flex flex-col items-center justify-center gap-4 transition-all group backdrop-blur-xl px-6"
             >
-              <div className="size-16 bg-blue-500 rounded-3xl flex items-center justify-center text-white shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform">
-                <Bell className="size-8" />
+              <div className="size-16 bg-red-600 rounded-3xl flex items-center justify-center text-yellow-400 shadow-[3px_3px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuong.svg" className="size-10 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
               </div>
-              <span className="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight text-center line-clamp-2">{sessionNames[sessionId]}</span>
+              <span className="text-[27px] md:text-[33px] font-bold text-slate-800 tracking-tight text-center line-clamp-2">{sessionNames[sessionId]}</span>
             </motion.button>
           ))}
         </div>
@@ -488,7 +487,7 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
                 <Settings className="size-5" />
               </button>
             </div>
-            <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+            <div className="bg-red-600 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
               {sessionName}
             </div>
           </div>
@@ -504,9 +503,9 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
               <motion.div 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="flex items-center gap-3 text-red-600 bg-white px-6 py-3 rounded-full shadow-lg shadow-black/10"
+                className="flex items-center gap-3 text-yellow-400 bg-red-600 px-6 py-3 rounded-full shadow-[3px_3px_0px_rgba(0,0,0,1)]"
               >
-                <Bell className="size-5 animate-pulse" />
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuong.svg" className="size-6 animate-pulse drop-shadow-[1px_1px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
                 <span className="text-lg md:text-xl font-black uppercase tracking-widest">
                   Next: {nextTimer.time} ({nextTimer.ringtoneName})
                 </span>
@@ -849,7 +848,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
             {authError && <p className="text-red-500 text-xs font-medium text-center">{authError}</p>}
             <button 
               type="submit"
-              className="w-full py-4 bg-blue-500 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-blue-600 transition-all mt-4 shadow-lg shadow-blue-500/25"
+              className="w-full py-4 bg-red-600 text-white rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-red-700 transition-all mt-4 shadow-lg shadow-red-600/25"
             >
               <LogIn className="size-5" />
               Đăng nhập
@@ -923,7 +922,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
                   <button 
                     onClick={handleSaveSessionName}
                     disabled={isSavingSessionName || isSaving}
-                    className="w-full py-2.5 bg-blue-500 text-white rounded-xl text-[10px] font-bold uppercase tracking-wider hover:bg-blue-600 transition-all disabled:opacity-50 shadow-md shadow-blue-500/20"
+                    className="w-full py-2.5 bg-red-600 text-white rounded-xl text-[10px] font-bold uppercase tracking-wider hover:bg-red-700 transition-all disabled:opacity-50 shadow-md shadow-red-600/20"
                   >
                     {isSavingSessionName ? 'Saving...' : 'Update Name'}
                   </button>
@@ -961,7 +960,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
 
           <div className="mt-auto p-4 border-t border-slate-200/50">
             <div className="flex items-center gap-3 px-3 py-3 rounded-2xl hover:bg-white/80 transition-colors group cursor-pointer shadow-sm border border-transparent hover:border-slate-200/50">
-              <div className="size-10 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center text-blue-600">
+              <div className="size-10 rounded-full overflow-hidden bg-red-100 flex items-center justify-center text-red-600">
                 <Users className="size-5" />
               </div>
               <div className="flex-1 min-w-0">
@@ -1145,7 +1144,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
               <button 
                 onClick={handleSave}
                 disabled={isSaving || isSavingSessionName}
-                className="w-full py-4 bg-blue-500 text-white rounded-2xl text-sm font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full py-4 bg-red-600 text-white rounded-2xl text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-600/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isSaving && <div className="size-4 border-2 border-white border-t-transparent animate-spin rounded-full"></div>}
                 {isSaving ? 'Saving...' : (editingTimerId ? 'Update Timer' : 'Save Timer')}
@@ -1176,7 +1175,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
               className="mt-8 bg-white/70 border border-slate-200/50 rounded-3xl p-8 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.04)]"
             >
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2 text-slate-900">
-                <Bell className="size-5 text-blue-600" />
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuong.svg" className="size-6 text-red-600 drop-shadow-[1px_1px_0px_rgba(0,0,0,0.3)]" referrerPolicy="no-referrer" />
                 Active Timers
               </h3>
               
@@ -1189,7 +1188,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
                   {timers.map((timer) => (
                     <div key={timer.id} className="flex items-center justify-between p-4 rounded-2xl bg-white/50 border border-slate-200/80 hover:border-blue-300 transition-colors shadow-sm">
                       <div className="flex items-center gap-4">
-                        <div className="bg-blue-50 text-blue-600 px-3 py-1.5 rounded-xl font-mono font-semibold text-lg border border-blue-100">
+                        <div className="bg-red-50 text-red-600 px-3 py-1.5 rounded-xl font-mono font-semibold text-lg border border-red-100">
                           {timer.time}
                         </div>
                         <div>
@@ -1249,7 +1248,7 @@ const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, 
 // --- Helper Components ---
 
 const NavItem = ({ icon, label, active = false }: { icon: React.ReactNode, label: string, active?: boolean }) => (
-  <div className={`flex items-center gap-3 px-4 py-3 rounded-2xl transition-all font-medium ${active ? 'bg-blue-50 text-blue-600 shadow-sm border border-blue-100' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
+  <div className={`flex items-center gap-3 px-4 py-3 rounded-2xl transition-all font-medium ${active ? 'bg-red-50 text-red-600 shadow-sm border border-red-100' : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}`}>
     {icon}
     <span className="text-sm">{label}</span>
   </div>
