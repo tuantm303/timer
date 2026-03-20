@@ -234,7 +234,7 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
       className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat relative" 
       style={{ backgroundImage: 'url("https://hoangmaistarschool.edu.vn/thongtin/nen.jpg")' }}
     >
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-[4px]"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       
       {/* Header with Logo moved to top-left */}
       <header className="relative z-20 flex items-center justify-between px-6 md:px-20 py-6">
@@ -451,7 +451,7 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
       className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat relative" 
       style={{ backgroundImage: 'url("https://hoangmaistarschool.edu.vn/thongtin/nen.jpg")' }}
     >
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
       <div className="relative z-10 flex flex-col min-h-screen">
         <header className="flex items-start justify-between px-6 md:px-20 py-6">
           <div className="flex items-center gap-4">
