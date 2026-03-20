@@ -542,7 +542,7 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
 };
 
 const AdminView = ({ selectedSession, onBackClick }: { selectedSession: string, onBackClick: () => void }) => {
-  const [email, setEmail] = useState('it@nshm.vn');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authError, setAuthError] = useState('');
   const [user, setUser] = useState<User | null>(null);
