@@ -255,7 +255,7 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center p-6 -mt-20">
         <div className="text-center mb-12">
           <h2 className="text-white text-4xl md:text-5xl font-black uppercase tracking-[0.1em] drop-shadow-lg mb-4">HỆ THỐNG CHUÔNG HIỆU LỆNH THI</h2>
-          <p className="text-red-600 text-2xl md:text-3xl font-black uppercase tracking-widest drop-shadow-[1px_1px_0px_rgba(255,255,255,0.5)]">THẦY / CÔ VUI LÒNG CHỌN CA THI</p>
+          <p className="text-red-600 text-2xl md:text-3xl font-black uppercase tracking-widest drop-shadow-[1px_1px_0px_rgba(0,0,0,1)]">THẦY / CÔ VUI LÒNG CHỌN CA THI</p>
         </div>
 
         <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
