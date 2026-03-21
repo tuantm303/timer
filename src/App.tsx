@@ -457,10 +457,10 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
           <div className="flex items-center gap-4">
             <button 
               onClick={onBackClick}
-              className="size-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-white/30 transition-all cursor-pointer text-white shadow-lg"
+              className="size-12 rounded-full bg-red-600 backdrop-blur-md border border-red-500 flex items-center justify-center hover:bg-red-700 transition-all cursor-pointer text-white shadow-lg"
               title="Quay lại chọn ca thi"
             >
-              <ArrowLeft className="size-5" />
+              <ArrowLeft className="size-6" />
             </button>
             <div className="flex items-center gap-3 bg-white/95 p-2 md:p-3 rounded-[10px] shadow-lg shadow-black/10 backdrop-blur-sm w-fit">
               <img 
