@@ -237,7 +237,7 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
       <div className="absolute inset-0 bg-black/40"></div>
       
       {/* Header with Logo moved to top-left */}
-      <header className="relative z-20 flex items-center justify-between px-6 md:px-20 py-6">
+      <header className="relative z-20 flex items-center justify-between px-4 sm:px-6 md:px-20 py-4 md:py-6">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -246,19 +246,19 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
           <img 
             src="https://hoangmaistarschool.edu.vn/thongtin/LogoNSHM.png" 
             alt="Logo" 
-            className="h-12 md:h-16 w-auto object-contain" 
+            className="h-10 sm:h-12 md:h-16 w-auto object-contain" 
             referrerPolicy="no-referrer"
           />
         </motion.div>
       </header>
 
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center p-6 -mt-20">
-        <div className="text-center mb-12">
-          <h2 className="text-white text-4xl md:text-5xl font-black uppercase tracking-[0.1em] drop-shadow-lg mb-4">HỆ THỐNG CHUÔNG HIỆU LỆNH THI</h2>
-          <p className="text-red-600 text-2xl md:text-3xl font-black uppercase tracking-widest drop-shadow-[1px_1px_0px_rgba(0,0,0,1)]">THẦY / CÔ VUI LÒNG CHỌN CA THI</p>
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-5xl font-black uppercase tracking-[0.1em] drop-shadow-lg mb-2 md:mb-4">HỆ THỐNG CHUÔNG HIỆU LỆNH THI</h2>
+          <p className="text-red-600 text-lg sm:text-xl md:text-3xl font-black uppercase tracking-widest drop-shadow-[1px_1px_0px_rgba(0,0,0,1)]">THẦY / CÔ VUI LÒNG CHỌN CA THI</p>
         </div>
 
-        <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           {sessionIds.map((sessionId, index) => (
             <motion.button
               key={sessionId}
@@ -268,12 +268,12 @@ const SessionSelectionView = ({ onSelect }: { onSelect: (session: string) => voi
               whileHover={{ scale: 1.02, backgroundColor: 'rgba(255, 255, 255, 0.98)' }}
               whileTap={{ scale: 0.98 }}
               onClick={() => onSelect(sessionId)}
-              className="h-auto min-h-[12rem] py-8 bg-white/80 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 flex flex-col items-center justify-center gap-4 transition-all group backdrop-blur-xl px-6"
+              className="h-auto min-h-[8rem] md:min-h-[12rem] py-6 md:py-8 bg-white/80 rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/40 flex flex-col items-center justify-center gap-3 md:gap-4 transition-all group backdrop-blur-xl px-4 md:px-6"
             >
-              <div className="size-16 bg-[#a20d0d] rounded-3xl flex items-center justify-center text-[#23328c] shadow-[1px_1px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
-                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-10 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
+              <div className="size-12 md:size-16 bg-[#a20d0d] rounded-2xl md:rounded-3xl flex items-center justify-center text-[#23328c] shadow-[1px_1px_0px_rgba(0,0,0,1)] group-hover:scale-110 transition-transform">
+                <img src="https://hoangmaistarschool.edu.vn/thongtin/chuongv.svg" className="size-8 md:size-10 drop-shadow-[2px_2px_0px_rgba(0,0,0,0.5)]" referrerPolicy="no-referrer" />
               </div>
-              <span className="text-[30px] md:text-[36px] font-black text-[#23328c] tracking-tight text-center drop-shadow-[1px_1px_0px_rgba(0,0,0,1)] leading-tight">{sessionNames[sessionId]}</span>
+              <span className="text-[22px] sm:text-[26px] md:text-[36px] font-black text-[#23328c] tracking-tight text-center drop-shadow-[1px_1px_0px_rgba(0,0,0,1)] leading-tight">{sessionNames[sessionId]}</span>
             </motion.button>
           ))}
         </div>
@@ -466,7 +466,7 @@ const ClockView = ({ selectedSession, onAdminClick, onBackClick }: { selectedSes
               <img 
                 src="https://hoangmaistarschool.edu.vn/thongtin/LogoNSHM.png" 
                 alt="Logo" 
-                className="h-12 md:h-16 w-auto object-contain" 
+                className="h-10 sm:h-12 md:h-16 w-auto object-contain" 
                 referrerPolicy="no-referrer"
               />
             </div>
